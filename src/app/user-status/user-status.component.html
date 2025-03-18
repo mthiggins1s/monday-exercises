@@ -1,0 +1,10 @@
+<div class="status-card" [style.backgroundColor]="statusColor()">
+    <!-- the current user status is displayed using this below: -->
+    <h2>User Status: {{ userStatus() }}</h2>
+    <!-- Why userStatus() instead of userStatus? Signals are functions, so we must call them to retrieve their values -->
+    <div class="buttons">
+        <button (click)="setStatus('active')">Set Active</button>
+        <button (click)="setStatus('inactive')">Set Inactive</button>
+        <button (click)="setStatus('banned')">Set Banned</button>
+    </div>
+</div>

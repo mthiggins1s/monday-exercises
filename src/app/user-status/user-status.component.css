@@ -1,0 +1,30 @@
+.status-card {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:nth-child(1) { background-color: green; color: white; }
+button:nth-child(2) { background-color: gray; color: white; }
+button:nth-child(3) { background-color: red; color: white; }
+
+button:hover {
+    opacity: 0.8;
+}
