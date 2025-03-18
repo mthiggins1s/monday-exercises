@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TaskListComponent } from "./task-list/task-list.component";
 import { Task } from './task-list/task-list.component';
+import { FavoriteBooksComponent } from "./favorite-books/favorite-books.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TaskListComponent],
+  imports: [RouterOutlet, TaskListComponent, FavoriteBooksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

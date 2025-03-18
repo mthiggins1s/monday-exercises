@@ -1,14 +1,22 @@
-<ul>
-    @for (let task of tasks()) {
-      <li (click)="selectTask(task)">{{ task.title }}</li>
-    }
-  </ul>
-  
-  @if (selectedTask()) {
-    <div>
-      <h3>{{ selectedTask()?.title || 'No Title' }}</h3>
-      <p>{{ selectedTask()?.description || 'No Description' }}</p>
-    </div>
-  } @else {
-    <p>Select a task to view details.</p>
-  }
+<div>
+    <ul>
+      <!-- > @for loops over 'tasks' and renders each task inside a list 
+           > Uses track task.id to track each task by its id. 
+           > The (click)="selectTask(task)" -->
+        @for (task of tasks; track task.id) {
+          <li (click)="selectTask(task)">{{ task.title }}</li>
+        }
+      </ul>
+      
+      <!-- This checks if selectedTask() exists:
+          > If true -> displays the task's title and description -->
+      @if (selectedTask()) {
+        <div>
+          <h3>{{ selectedTask()?.title || 'No Title' }}</h3>
+          <p>{{ selectedTask()?.description || 'No Description' }}</p>
+        </div>
+        <!-- > If false -> Shows a default message -->
+      } @else {
+        <p>Select a task to view details.</p>
+      }
+</div>
