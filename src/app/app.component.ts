@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { TaskListComponent } from "./task-list/task-list.component";
 import { Task } from './task-list/task-list.component';
 import { FavoriteBooksComponent } from "./favorite-books/favorite-books.component";
+import { ProfileCardComponent } from "./profile-card/profile-card.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TaskListComponent, FavoriteBooksComponent],
+  imports: [RouterOutlet, TaskListComponent, FavoriteBooksComponent, ProfileCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

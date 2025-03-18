@@ -1,0 +1,13 @@
+<div *ngIf="isLoggedIn(); else loggedOut" class="profile-card">
+    <img [src]="avatar" alt="Avatar" class="avatar" />
+    <h2>{{ name }}</h2>
+  </div>
+  
+  <ng-template #loggedOut>
+    <p>Please log in</p>
+  </ng-template>
+  
+  <button (click)="toggleLogin()">
+    {{ isLoggedIn() ? 'Logout' : 'Login' }}
+  </button>
+  
