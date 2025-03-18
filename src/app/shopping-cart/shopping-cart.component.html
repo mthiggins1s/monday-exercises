@@ -1,0 +1,15 @@
+<div>
+  <ul>
+    @for (item of items; track item.id) {
+    <li (click)="selectedItem()">{{ item.item }}</li>
+    }
+  </ul>
+  @if (selectedItem()) {
+  <div>
+    <h1>{{ selectedItem()?.item || "No Item " }}</h1>
+    <p>{{ selectedItem()?.description || "No Description" }}</p>
+  </div>
+  } @else {
+  <p>Select an Item to view its contents</p>
+  }
+</div>
